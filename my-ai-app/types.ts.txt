@@ -1,0 +1,35 @@
+// تعریف ساختار ورودی‌های داستان
+export interface StoryInput {
+  numScenes: number;
+  storyText: string;
+  educationalText: string;
+  characterDetails: string;
+  locations: string[];
+}
+
+// تعریف ساختار هر صحنه در استوری‌برد
+export interface Scene {
+  sceneNumber: number;
+  sceneDescriptionPersian: string;
+  sceneDescriptionEnglish: string;
+  sceneDescriptionArabic: string;
+  imagePromptEnglish: string;
+  imagePromptArabic: string;
+  imagePromptPersian: string;
+  soundAtmosphere: string;
+}
+
+// تعریف ساختار پاسخ کلی از هوش مصنوعی
+export interface StoryboardResponse {
+  styleGuideEnglish: string;
+  scenes: Scene[];
+}
+
+// تعریف ساختار داده‌های فرم (برای ذخیره موقت)
+export interface FormData {
+  numScenes: number;
+  storyText: string;
+  educationalText: string;
+  characterDetails: string;
+  locations: string;
+}
